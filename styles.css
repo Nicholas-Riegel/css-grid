@@ -99,13 +99,15 @@ button{
 #social {
     background-color: rgb(223, 223, 222);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #social-container {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns:  repeat(6, 1fr);
+    /* grid-template-rows: 1fr; */
     width: 70%;
     margin-bottom: 5%;
 }
@@ -340,16 +342,14 @@ footer #right-box {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
     }
 
     #social-container {
-        grid-template-columns: 1f;
-        /* why isn't this making them into rows */
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        /* background-color: red; */
-        /* width: 70%; */
-        width: auto;
-        height: 200px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 40%;
+        height: auto;
+        margin-top: 5%;
     }
 
     #social-header {
