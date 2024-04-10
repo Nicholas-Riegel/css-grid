@@ -9,8 +9,8 @@
 body {
     display: grid;
     grid-template-columns: 1f;
-    grid-template-rows: 80px 1fr .5fr;
-    grid-row-gap: 10px;
+    grid-template-rows: 80px 1fr .5fr 1fr;
+    grid-row-gap: 20px;
 }
 
 /* nav */
@@ -54,7 +54,7 @@ nav li {
     align-items: center;
     margin: 0 4%;
     font-weight: bold;
-}
+} 
 
 /* hero */
 
@@ -99,7 +99,7 @@ button{
     border-radius: 5px;
     background-color: black;
     color: white;
-}
+} 
 
 /* social-proof */
 
@@ -111,9 +111,10 @@ button{
 
 #social-container {
     display: grid;
-    grid-template-columns: 1f 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 70%;
+    margin-bottom: 5%;
 }
 
 #social-header {
@@ -126,8 +127,173 @@ button{
 .social-circle {
     background-color: black;
     border-radius: 50%;
+    aspect-ratio: 1/1;
     margin: 10%;
-    /* width: 50px; */
+    /* width: 20%; */
+}
+
+/* features left */
+
+#features-left{
+    display: grid;
+    grid-template-rows: 1fr; /* three rows defined here */
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+}
+
+#features-left-1{
+    padding: 30% 40% 30% 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: white; */
+    background-color: rgb(223, 223, 222);
+
+}
+
+#features-left-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#features-left-2 div{
+    background-color: white;
+    height: 60%;
+    width: 50%;
+    border-radius: 8px;
+}
+
+#features-left-2 button{
+    padding: 5% 12%;
+    border-radius: 5px;
+}
+
+/* CTA */
+
+#CTA {
+    text-align: center;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(223, 223, 222);
+}
+
+#cta-container {
+    width: 40%;
+}
+
+#cta-container h1 {
+    margin-bottom: 5%;
+}
+
+#cta-container p {
+    margin-bottom: 5%;
+}
+
+#cta-container button {
+    padding: 4% 9%;
+}
+
+
+
+/* transparent pricing */
+
+#pricing{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr; 
+    min-height: 95vh;
+    background-color: rgb(223, 223, 222);
+    padding: 10% 15% 5%;
+}
+
+#pricing nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 3;
+    text-align: center;
+}
+
+#pricing nav h1 {
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+
+#pricing .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    padding: 10%;
+    margin: 0 10%;
+}
+
+#pricing .card button {
+    padding: 5% 20%;
+    border-radius: 5px;
+}
+
+#pricing #circle {
+    background-color: black;
+    height: 20%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#pricing .card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pricing .card li {
+    margin-bottom: 1rem;
+    opacity: .4;
+}
+
+#pricing .card h1 {
+    margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(223, 223, 222);
+    height: 300px;
+    display: flex;
+    padding-top: 5%;
+}
+
+footer #left-box{
+    width: 35%;
+    /* margin-top: 5%; */
+    margin-left: 5%;
+}
+
+#left-box h1{
+    margin-bottom: 4%;
+}
+
+#left-box p{
+    margin-bottom: 4%;
+}
+
+footer #right-box {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr  1fr;
+}
+
+#right-box div{
+    padding-left: 10%;
+}
+
+#right-box p {
+    margin-top: 10%;
 }
 
 /* media queries */
@@ -136,7 +302,7 @@ button{
     body {
         display: grid;
         grid-template-columns: 1f;
-        grid-template-rows: 200px 1fr .7fr;
+        grid-template-rows: 200px .3fr .2fr 1fr .3fr;
         grid-row-gap: 10px;
     }
     nav {
@@ -182,18 +348,24 @@ button{
 
     #social {
         padding: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #social-container {
-        display: grid;
         grid-template-columns: 1f;
         /* why isn't this making them into rows */
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        width: 70%;
+        /* background-color: red; */
+        /* width: 70%; */
+        width: auto;
+        height: 50%;
     }
 
     #social-header {
-        grid-column: span 0;
+        /* grid-column: span 0; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -202,5 +374,53 @@ button{
     #social-header h3 {
         text-align: center;
     }
-  }
+
+    #features-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #pricing {
+        grid-template-columns: 1fr;
+      }
+    #pricing nav{
+          grid-column: span 1;
+      }
+
+    #pricing .card {
+          margin: 5%;
+          height: 500px;
+      }
+
+    #CTA {
+        height: 500px;
+    }
+    footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    footer #left-box{
+        margin-left: 0;
+    }
+
+    footer #right-box {
+        display: flex;
+        /* grid-template-columns: 1fr; */
+        /* background-color: red; */
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+    #right-box div {
+        margin-top: 5%;
+        padding-left: 0;
+    }
+    #right-box div p {
+        margin-top: 1%;
+    }
+}
 
