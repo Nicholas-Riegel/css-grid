@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 /* nav */
@@ -349,7 +349,7 @@ footer #right-box {
         /* background-color: red; */
         /* width: 70%; */
         width: auto;
-        height: 50%;
+        height: 200px;
     }
 
     #social-header {
@@ -357,6 +357,7 @@ footer #right-box {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 5%;
     }
     
     #social-header h3 {
