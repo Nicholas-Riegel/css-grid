@@ -399,7 +399,7 @@ footer #right-box {
         height: auto;
         display: flex;
         flex-direction: column;
-        padding-left: 0;
+        padding: 10%;
         align-items: center;
         text-align: center;
     }
